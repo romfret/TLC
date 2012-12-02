@@ -1,0 +1,2 @@
+Détailler les différents services de media hosting d'AWS.
+Notamment le service de diffusion CloudFront qui à l'ai d'être principalement prévu pour cette activité.

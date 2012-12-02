@@ -1,0 +1,56 @@
+=========================================
+http://aws.amazon.com/fr/media-hosting/
+=========================================
+
+But :
+Diffusion de fichiers multimédias.
+=> Le multimédia peut entraîner des pics de demannde si celui-ci est attractif.
+==> Gestion de la bande passante, stockage, sécurité du serveur.
+===> Coût peut donc rapidement dépasser l'estimation de départ.
+
+=> Réflexion sur la mise en oeuvre.. (cf. les points dans "Le défi")
+
+
+AWS fournit plusieurs produits pour résoudre ce problème :
+
+- Amazon Simple Storage Service (Amazon S3).
+Gère d'énorme quantités de capacité de stockage de façon simple pour l'utilisateur.
+Essaie de stocker les information le plus proche du lieu d'exploitation.
+
+- Amazon CloudFront.
+Gère la diffusion de contenu (temps de réponse, etc.).
+
+- Amazon Elastic Compute Cloud (Amazon EC2).
+Gère la construction d'application scalable traitant (e.g. économiquement) et distributant les fichiers multimédia.
+
+
+
+Ce que prône AWS :
+- Facile d'utilisation : Abstraction liées au stockage et à la distribution de fichiers multimédia. Des outils de management et des APIs de services web pour aider à la mise en oeuvre.
+
+- Flexible : Personalisation de l'environement (OS, langage de programmation, logiciels & services).
+
+- Economique : Paiement que de la puissance de calcul, le stockage et les ressources utilisées. Aucun contrat d'engagement.
+
+- Fiable : Infrastructure de calcul ajustable (en fonction de la demande), fiable et sécurisée (physique, opérationnel, logiciel). Réseaux privés virtuels.
+
+
+=========================================
+http://aws.amazon.com/fr/sdkforios/
+=========================================
+AWS fournit un SDK pour iOS permettant le développement d'application iOS utilisant AWS.
+Ex :
+- Application permettant de stocker des photos prisent sur Amazon S3.
+- Réseau social de jeu (scores, statistiques, etc.) via SimpleDB.
+- Client messagerie utilisant Amazon SQS & SNS pour gérer l'échange de messages.
+
+Ce SDK falicite l'appel d'un API de service web depuis une app mobile pour les développeurs.
+Mots clefs : stockage, base de données, messageries, cacul, surveillance (instance Amazon).
+
+
+=========================================
+http://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_mediasharing_09.pdf
+=========================================
+Schéma du media sharing d'AWS.
+
+
