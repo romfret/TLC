@@ -17,8 +17,54 @@ AWS fournit plusieurs produits pour résoudre ce problème :
 Gère d'énorme quantités de capacité de stockage de façon simple pour l'utilisateur.
 Essaie de stocker les information le plus proche du lieu d'exploitation.
 
-- Amazon CloudFront.
-Gère la diffusion de contenu (temps de réponse, etc.).
+
+
+
+
+- Amazon CloudFront (http://aws.amazon.com/fr/cloudfront/).
+
+Destinié à la diffusion de contenu (temps de réponse, etc.).
+Que ce soit les données multimedia ou les applications web.
+Il gère toutes les contraintes de performance :
+Rapidité :
+- Mise en cache des données proche de l'utilisateur utilisant l'application web grâce à un réseau d'emplacements CloudFront.
+	=> Réduit latence et augmente les débits lors des téléchargements.
+	=> Réacheminement des requêtes de contenu dynamique vers le serveur original via des réseaux de chemins optimisés fesant l'objet d'une survelliance permanante de la part d'Amazon.
+Simplicité :
+- Un seul appel d'API permet de commencer la diffusion de contenu.
+- Intéraction simple avec CloudFront via une interface utilisateur graphique.
+- Possibilité d'utiliser le même nom de domaine pour les contenus statiques et dynamiques.
+- Toutes les modifications apportées à la configuration existante sont appliquées à l'ensemble du réseau mondial en quelques minutes.
+Compatibilité :
+- CloudFront est prévu pour fonctionner avec tous les autres services AWS.
+Economie :
+- Seule le contenu distribué par le biais du réseau est facturé (sans engagements et frais initiaux).
+	=> Ces avantages concernent tout type de contenu diffusé : statique, dynamique, fichiers multimédias en continu ou application Web contenant une combinaison de ces types de contenu.
+Scalabilité :
+- CloudFront répond automatiquement aux montés en charges.
+- Regroupement des requêtes simultanées concernant un même objet avant de contacter votre serveur d'origine.
+	=> Réduction des montés en charges.
+Fiabilité :
+- CloudFront est construit sur l'infrastructure d'Amazon.
+- Redirection  automatique des utilisateurs finaux vers le site disponible le plus proche en fonction des conditions du réseau. Les requêtes d'origine émanant des emplacements périphériques vers les serveurs d'origine AWS sont acheminées via des chemins réseau qu'Amazon surveille en permanence et optimise en termes de disponibilité et de performances.
+Mondial :
+- ClouFront possède un réseau mondial d'emplacement.
+
+Tarification :
+Comme d'hab... (que ce qui est utilié, le stockage, ...).
+
+Points intéressants :
+- Possibilité d'utiliser un service de stockage externe à AWS. Et n'utiliser ceuw d'AWS uniquement que lors des montés en charge.
+- Idem pour l'application web (?)
+- Possibilité de choisir la région des emplacements de façon à réduir les coûts (régions moins chères que d'autres).
+
+== Mettre schéma d'architecture == images/Cloudfront-Diagram_Website_Updated.jpeg
+
+
+- Amazon Route 53 est un service Web de système de noms de domaine (DNS) hautement disponible et évolutif.
+
+
+
 
 - Amazon Elastic Compute Cloud (Amazon EC2).
 Gère la construction d'application scalable traitant (e.g. économiquement) et distributant les fichiers multimédia.
